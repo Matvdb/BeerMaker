@@ -93,13 +93,17 @@ class OutilsFabricationState extends State<OutilsFabrication> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.15,
-              height: MediaQuery.of(context).size.height * 0.15,
-              child: Image(image: AssetImage("assets/images/BMLogo/beermakerlogo350.png")),
+            Row(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.15,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  child: const Image(image: AssetImage("assets/images/BMLogo/beermakerlogo350.png"))
+                ),
+                const Padding(padding: EdgeInsets.all(5)),
+                const Text('BeerMaker'),
+              ],
             ),
-            Padding(padding: EdgeInsets.all(5)),
-            const Text('BeerMaker'),
           ],
         ),
       ),
@@ -108,7 +112,7 @@ class OutilsFabricationState extends State<OutilsFabrication> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children:const [
               SizedBox(
                 height: 150,
                 width: 150,
@@ -127,8 +131,8 @@ class OutilsFabricationState extends State<OutilsFabrication> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(Strings.phraseBiere, style: TextStyle(fontSize: 18.0),),
-                  Padding(padding: EdgeInsets.all(8)),
+                  const Text(Strings.phraseBiere, style: TextStyle(fontSize: 18.0),),
+                  const Padding(padding: EdgeInsets.all(8)),
                 Container(
                 width: MediaQuery.of(context).size.width * 0.3,
                 child: TextFormField(
@@ -151,8 +155,8 @@ class OutilsFabricationState extends State<OutilsFabrication> {
               Row(
                mainAxisAlignment: MainAxisAlignment.center,
                children: [
-                Text(Strings.phraseDegres, style: TextStyle(fontSize: 18.0),),
-                Padding(padding: EdgeInsets.all(8)),
+                const Text(Strings.phraseDegres, style: TextStyle(fontSize: 18.0),),
+                const Padding(padding: EdgeInsets.all(8)),
                 Container(
                 width: MediaQuery.of(context).size.width * 0.3,
                 child: TextFormField(
@@ -176,7 +180,7 @@ class OutilsFabricationState extends State<OutilsFabrication> {
                mainAxisAlignment: MainAxisAlignment.center,
                children: [
                 const Text(Strings.phraseGrains, style: TextStyle(fontSize: 18.0),),
-                const  Padding(padding: EdgeInsets.all(8)),
+                const Padding(padding: EdgeInsets.all(8)),
                 Container(
                 width: MediaQuery.of(context).size.width * 0.3,
                 child: TextFormField(

@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const[
               SizedBox(
                 height: 150,
                 width: 150,
@@ -38,26 +38,26 @@ class _HomeScreenState extends State<HomeScreen> {
               Text("BeerMaker", style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),)
               ],
           ),
-          Padding(padding: EdgeInsets.all(30)),
+          const Padding(padding: EdgeInsets.all(30)),
           SizedBox(
             height: MediaQuery.of(context).size.height / 8,
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/etapes'),
             child: const Text("Etapes de fabrication"),),
           ),
-          Padding(padding: EdgeInsets.all(10)),
+          const Padding(padding: EdgeInsets.all(10)),
           SizedBox(
              height: MediaQuery.of(context).size.height / 8,
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/outils'),
             child: const Text("Outils de fabrication"),),
           ),
-          Padding(padding: EdgeInsets.all(10)),
+          const Padding(padding: EdgeInsets.all(10)),
           SizedBox(
             height: MediaQuery.of(context).size.height / 8,
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/recettes'),
-            child: const Text("recettes"),),
+            child: const Text("Recettes"),),
           )
         ],
       ),

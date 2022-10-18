@@ -6,7 +6,7 @@ class Calculs {
   }
 
   static double calculBrassage(double malt) {
-    return double.parse((malt * 2.8).toStringAsFixed(3));
+    return double.parse((malt * 2.8).toStringAsFixed(2));
   }
 
   static double calculRincage(double litreBiere, double brassage) {

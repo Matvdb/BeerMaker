@@ -22,14 +22,14 @@ class FabricationState extends State<Fabrication> {
   Container _image3 = Container(height: 200,width: 200, child: Text(""));
   Container _image4 = Container(height: 200,width: 200, child: Text(""));
 
-  void decrement() {
+  void _decrementCounter() {
     if (_i > 0) {
       _i--;
       counter();
     }
   }
 
-  void increment() {
+  void _incrementCounter() {
     if (_i < 9) {
       _i++;
       counter();
@@ -37,11 +37,11 @@ class FabricationState extends State<Fabrication> {
   }
 
 
-  IconButton buttonNext() {
+  IconButton buttonSuivant() {
     IconButton result = const IconButton(onPressed: null, icon: Icon(null));
     if (_i != 8) {
       result = IconButton(
-          onPressed: increment,
+          onPressed: _incrementCounter,
           icon: const Icon(
             Icons.arrow_forward,
             size: 25,
@@ -50,11 +50,11 @@ class FabricationState extends State<Fabrication> {
     return result;
   }
 
-  IconButton buttonPrevious() {
+  IconButton buttonPrecedent() {
     IconButton result = const IconButton(onPressed: null, icon: Icon(null));
     if (_i != 0) {
       result = IconButton(
-          onPressed: decrement,
+          onPressed: _decrementCounter,
           icon: const Icon(
             Icons.arrow_back,
             size: 25,
@@ -164,7 +164,7 @@ class FabricationState extends State<Fabrication> {
            Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: const [
               SizedBox(
                 height: 150,
                 width: 150,
@@ -173,14 +173,14 @@ class FabricationState extends State<Fabrication> {
               Text("Etapes de fabrication", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
               ],
           ),
-          Text("Pensez à scroller afin d'avoir toutes les informations"),
-          Padding(padding: EdgeInsets.all(8)),
+          const Text("Pensez à scroller afin d'avoir toutes les informations"),
+          const Padding(padding: EdgeInsets.all(8)),
             Text(_titre,
                 style:
                     const TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold)),
             const Padding(padding: EdgeInsets.all(10)),
-            Text(_texte, style: TextStyle(fontSize: 20.0),),
-            Padding(padding: EdgeInsets.all(8)),
+            Text(_texte, style: const TextStyle(fontSize: 20.0),),
+            const Padding(padding: EdgeInsets.all(8)),
             _image,
             _image2,
             _image3,
@@ -195,9 +195,8 @@ class FabricationState extends State<Fabrication> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-        
-            buttonPrevious(),
-            buttonNext(),
+            buttonPrecedent(),
+            buttonSuivant(),
            
           ],
         ),
